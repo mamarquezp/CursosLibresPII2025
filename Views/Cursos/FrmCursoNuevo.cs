@@ -8,13 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CursosLibres.Views
+namespace CursosLibres.Views.Cursos
 {
-	public partial class FrmCursos : Form
-	{
-		public FrmCursos()
-		{
-			InitializeComponent();
-		}
-	}
+    public partial class FrmCursoNuevo : Form
+    {
+        public FrmCursoNuevo()
+        {
+            InitializeComponent();
+        }
+    }
 }
