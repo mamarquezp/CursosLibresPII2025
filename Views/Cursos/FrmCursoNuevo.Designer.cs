@@ -30,7 +30,6 @@
         {
             lblTitulo = new Label();
             txtBoxTitulo = new TextBox();
-            txtBoxCategoria = new TextBox();
             lblCategoria = new Label();
             txtBoxCupo = new TextBox();
             lblCupo = new Label();
@@ -39,7 +38,6 @@
             lblDocente = new Label();
             cmbBoxDocente = new ComboBox();
             lblSesiones = new Label();
-            cmbBoxSesion = new ComboBox();
             txtBoxCampus = new TextBox();
             lblCampus = new Label();
             txtBoxSalon = new TextBox();
@@ -50,6 +48,17 @@
             lblPlataforma = new Label();
             btnLimpiar = new Button();
             btnGuardar = new Button();
+            cmbBoxCategoria = new ComboBox();
+            dtpFechaSesion = new DateTimePicker();
+            panel1 = new Panel();
+            btnAgregaSesion = new Button();
+            dgvSesiones = new DataGridView();
+            lblDuracion = new Label();
+            nupDuracion = new NumericUpDown();
+            lblFecha = new Label();
+            panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvSesiones).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)nupDuracion).BeginInit();
             SuspendLayout();
             // 
             // lblTitulo
@@ -68,14 +77,6 @@
             txtBoxTitulo.PlaceholderText = "Ingrese el nombre del curso";
             txtBoxTitulo.Size = new Size(480, 27);
             txtBoxTitulo.TabIndex = 1;
-            // 
-            // txtBoxCategoria
-            // 
-            txtBoxCategoria.Location = new Point(204, 45);
-            txtBoxCategoria.Name = "txtBoxCategoria";
-            txtBoxCategoria.PlaceholderText = "Ingrese la categoría del curso";
-            txtBoxCategoria.Size = new Size(480, 27);
-            txtBoxCategoria.TabIndex = 3;
             // 
             // lblCategoria
             // 
@@ -141,24 +142,15 @@
             // lblSesiones
             // 
             lblSesiones.AutoSize = true;
-            lblSesiones.Location = new Point(12, 181);
+            lblSesiones.Location = new Point(1, 1);
             lblSesiones.Name = "lblSesiones";
             lblSesiones.Size = new Size(69, 20);
             lblSesiones.TabIndex = 10;
             lblSesiones.Text = "Sesiones:";
             // 
-            // cmbBoxSesion
-            // 
-            cmbBoxSesion.DropDownStyle = ComboBoxStyle.DropDownList;
-            cmbBoxSesion.FormattingEnabled = true;
-            cmbBoxSesion.Location = new Point(204, 178);
-            cmbBoxSesion.Name = "cmbBoxSesion";
-            cmbBoxSesion.Size = new Size(480, 28);
-            cmbBoxSesion.TabIndex = 11;
-            // 
             // txtBoxCampus
             // 
-            txtBoxCampus.Location = new Point(204, 212);
+            txtBoxCampus.Location = new Point(204, 178);
             txtBoxCampus.Name = "txtBoxCampus";
             txtBoxCampus.PlaceholderText = "Ingrese el campus donde se imparte el curso";
             txtBoxCampus.Size = new Size(480, 27);
@@ -167,7 +159,7 @@
             // lblCampus
             // 
             lblCampus.AutoSize = true;
-            lblCampus.Location = new Point(12, 215);
+            lblCampus.Location = new Point(12, 181);
             lblCampus.Name = "lblCampus";
             lblCampus.Size = new Size(65, 20);
             lblCampus.TabIndex = 12;
@@ -175,7 +167,7 @@
             // 
             // txtBoxSalon
             // 
-            txtBoxSalon.Location = new Point(204, 245);
+            txtBoxSalon.Location = new Point(204, 211);
             txtBoxSalon.Name = "txtBoxSalon";
             txtBoxSalon.PlaceholderText = "Ingrese el salón donde se imparte el curso";
             txtBoxSalon.Size = new Size(480, 27);
@@ -184,7 +176,7 @@
             // lblSalon
             // 
             lblSalon.AutoSize = true;
-            lblSalon.Location = new Point(12, 248);
+            lblSalon.Location = new Point(12, 214);
             lblSalon.Name = "lblSalon";
             lblSalon.Size = new Size(49, 20);
             lblSalon.TabIndex = 14;
@@ -192,7 +184,7 @@
             // 
             // txtBoxEnlace
             // 
-            txtBoxEnlace.Location = new Point(204, 278);
+            txtBoxEnlace.Location = new Point(204, 244);
             txtBoxEnlace.Name = "txtBoxEnlace";
             txtBoxEnlace.PlaceholderText = "Ingrese el enlace del curso";
             txtBoxEnlace.Size = new Size(480, 27);
@@ -201,7 +193,7 @@
             // lblEnlace
             // 
             lblEnlace.AutoSize = true;
-            lblEnlace.Location = new Point(12, 281);
+            lblEnlace.Location = new Point(12, 247);
             lblEnlace.Name = "lblEnlace";
             lblEnlace.Size = new Size(96, 20);
             lblEnlace.TabIndex = 16;
@@ -210,7 +202,7 @@
             // 
             // txtBoxPlataforma
             // 
-            txtBoxPlataforma.Location = new Point(204, 311);
+            txtBoxPlataforma.Location = new Point(204, 277);
             txtBoxPlataforma.Name = "txtBoxPlataforma";
             txtBoxPlataforma.PlaceholderText = "Ingrese la plataforma donde se imparte el curso";
             txtBoxPlataforma.Size = new Size(480, 27);
@@ -219,7 +211,7 @@
             // lblPlataforma
             // 
             lblPlataforma.AutoSize = true;
-            lblPlataforma.Location = new Point(12, 314);
+            lblPlataforma.Location = new Point(12, 280);
             lblPlataforma.Name = "lblPlataforma";
             lblPlataforma.Size = new Size(85, 20);
             lblPlataforma.TabIndex = 18;
@@ -227,7 +219,7 @@
             // 
             // btnLimpiar
             // 
-            btnLimpiar.Location = new Point(543, 397);
+            btnLimpiar.Location = new Point(543, 661);
             btnLimpiar.Name = "btnLimpiar";
             btnLimpiar.Size = new Size(132, 29);
             btnLimpiar.TabIndex = 20;
@@ -236,18 +228,100 @@
             // 
             // btnGuardar
             // 
-            btnGuardar.Location = new Point(405, 397);
+            btnGuardar.Location = new Point(405, 661);
             btnGuardar.Name = "btnGuardar";
             btnGuardar.Size = new Size(132, 29);
             btnGuardar.TabIndex = 21;
             btnGuardar.Text = "Guardar";
             btnGuardar.UseVisualStyleBackColor = true;
+            btnGuardar.Click += btnGuardar_Click;
+            // 
+            // cmbBoxCategoria
+            // 
+            cmbBoxCategoria.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbBoxCategoria.FormattingEnabled = true;
+            cmbBoxCategoria.Location = new Point(204, 45);
+            cmbBoxCategoria.Name = "cmbBoxCategoria";
+            cmbBoxCategoria.Size = new Size(480, 28);
+            cmbBoxCategoria.TabIndex = 22;
+            // 
+            // dtpFechaSesion
+            // 
+            dtpFechaSesion.CustomFormat = "dd/MM/yyyy HH:mm";
+            dtpFechaSesion.Format = DateTimePickerFormat.Custom;
+            dtpFechaSesion.Location = new Point(193, 34);
+            dtpFechaSesion.MinDate = new DateTime(2025, 9, 1, 0, 0, 0, 0);
+            dtpFechaSesion.Name = "dtpFechaSesion";
+            dtpFechaSesion.ShowUpDown = true;
+            dtpFechaSesion.Size = new Size(480, 27);
+            dtpFechaSesion.TabIndex = 23;
+            // 
+            // panel1
+            // 
+            panel1.Controls.Add(btnAgregaSesion);
+            panel1.Controls.Add(dgvSesiones);
+            panel1.Controls.Add(lblDuracion);
+            panel1.Controls.Add(nupDuracion);
+            panel1.Controls.Add(lblFecha);
+            panel1.Controls.Add(dtpFechaSesion);
+            panel1.Controls.Add(lblSesiones);
+            panel1.Location = new Point(12, 310);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(672, 332);
+            panel1.TabIndex = 24;
+            // 
+            // btnAgregaSesion
+            // 
+            btnAgregaSesion.Location = new Point(451, 65);
+            btnAgregaSesion.Name = "btnAgregaSesion";
+            btnAgregaSesion.Size = new Size(221, 29);
+            btnAgregaSesion.TabIndex = 28;
+            btnAgregaSesion.Text = "Añadir Sesión";
+            btnAgregaSesion.UseVisualStyleBackColor = true;
+            btnAgregaSesion.Click += btnAgregaSesion_Click;
+            // 
+            // dgvSesiones
+            // 
+            dgvSesiones.AllowUserToOrderColumns = true;
+            dgvSesiones.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvSesiones.Location = new Point(192, 100);
+            dgvSesiones.Name = "dgvSesiones";
+            dgvSesiones.RowHeadersWidth = 51;
+            dgvSesiones.Size = new Size(316, 219);
+            dgvSesiones.TabIndex = 27;
+            // 
+            // lblDuracion
+            // 
+            lblDuracion.AutoSize = true;
+            lblDuracion.Location = new Point(0, 69);
+            lblDuracion.Name = "lblDuracion";
+            lblDuracion.Size = new Size(139, 20);
+            lblDuracion.TabIndex = 26;
+            lblDuracion.Text = "Duración (Minutos):";
+            // 
+            // nupDuracion
+            // 
+            nupDuracion.Location = new Point(193, 67);
+            nupDuracion.Name = "nupDuracion";
+            nupDuracion.Size = new Size(150, 27);
+            nupDuracion.TabIndex = 25;
+            // 
+            // lblFecha
+            // 
+            lblFecha.AutoSize = true;
+            lblFecha.Location = new Point(1, 39);
+            lblFecha.Name = "lblFecha";
+            lblFecha.Size = new Size(50, 20);
+            lblFecha.TabIndex = 24;
+            lblFecha.Text = "Fecha:";
             // 
             // FrmCursoNuevo
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(687, 450);
+            ClientSize = new Size(687, 702);
+            Controls.Add(panel1);
+            Controls.Add(cmbBoxCategoria);
             Controls.Add(btnGuardar);
             Controls.Add(btnLimpiar);
             Controls.Add(txtBoxPlataforma);
@@ -258,20 +332,21 @@
             Controls.Add(lblSalon);
             Controls.Add(txtBoxCampus);
             Controls.Add(lblCampus);
-            Controls.Add(cmbBoxSesion);
-            Controls.Add(lblSesiones);
             Controls.Add(cmbBoxDocente);
             Controls.Add(lblDocente);
             Controls.Add(txtBoxCosto);
             Controls.Add(lblCosto);
             Controls.Add(txtBoxCupo);
             Controls.Add(lblCupo);
-            Controls.Add(txtBoxCategoria);
             Controls.Add(lblCategoria);
             Controls.Add(txtBoxTitulo);
             Controls.Add(lblTitulo);
             Name = "FrmCursoNuevo";
             Text = "Crear Nuevo Curso";
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvSesiones).EndInit();
+            ((System.ComponentModel.ISupportInitialize)nupDuracion).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -280,7 +355,6 @@
 
         private Label lblTitulo;
         private TextBox txtBoxTitulo;
-        private TextBox txtBoxCategoria;
         private Label lblCategoria;
         private TextBox txtBoxCupo;
         private Label lblCupo;
@@ -289,7 +363,6 @@
         private Label lblDocente;
         private ComboBox cmbBoxDocente;
         private Label lblSesiones;
-        private ComboBox cmbBoxSesion;
         private TextBox txtBoxCampus;
         private Label lblCampus;
         private TextBox txtBoxSalon;
@@ -300,5 +373,13 @@
         private Label lblPlataforma;
         private Button btnLimpiar;
         private Button btnGuardar;
+        private ComboBox cmbBoxCategoria;
+        private DateTimePicker dtpFechaSesion;
+        private Panel panel1;
+        private Label lblDuracion;
+        private NumericUpDown nupDuracion;
+        private Label lblFecha;
+        private Button btnAgregaSesion;
+        private DataGridView dgvSesiones;
     }
 }
