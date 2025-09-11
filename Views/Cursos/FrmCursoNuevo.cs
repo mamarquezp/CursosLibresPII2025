@@ -121,10 +121,10 @@ namespace CursosLibres.Views.Cursos
             txtBoxSalon.Clear();
             txtBoxEnlace.Clear();
             txtBoxPlataforma.Clear();
-            cmbBoxCategoria.SelectedIndex = -1;
-            cmbBoxDocente.SelectedIndex = -1;
+            cmbBoxCategoria.SelectedIndex = 0;
+            cmbBoxDocente.SelectedIndex = 0;
             dtpFechaSesion.Value = DateTime.Now;
-            nupDuracion.Value = 0;
+            nupDuracion.Value = 30;
             dgvSesiones.DataSource = null;
             sesionesTemporales.Clear();
         }

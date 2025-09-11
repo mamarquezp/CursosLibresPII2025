@@ -40,7 +40,7 @@ namespace CursosLibres.Views
             // 
             flowPanelTodoList.Location = new Point(12, 45);
             flowPanelTodoList.Name = "flowPanelTodoList";
-            flowPanelTodoList.Size = new Size(457, 343);
+            flowPanelTodoList.Size = new Size(427, 343);
             flowPanelTodoList.TabIndex = 0;
             // 
             // txtBoxBuscar
@@ -48,15 +48,15 @@ namespace CursosLibres.Views
             txtBoxBuscar.Location = new Point(12, 12);
             txtBoxBuscar.Name = "txtBoxBuscar";
             txtBoxBuscar.PlaceholderText = "Nombre del curso que desea buscar";
-            txtBoxBuscar.Size = new Size(336, 27);
-            txtBoxBuscar.TabIndex = 1;
+            txtBoxBuscar.Size = new Size(306, 27);
+            txtBoxBuscar.TabIndex = 0;
             // 
             // btnBuscar
             // 
-            btnBuscar.Location = new Point(354, 10);
+            btnBuscar.Location = new Point(324, 12);
             btnBuscar.Name = "btnBuscar";
             btnBuscar.Size = new Size(115, 29);
-            btnBuscar.TabIndex = 2;
+            btnBuscar.TabIndex = 1;
             btnBuscar.Text = "Buscar";
             btnBuscar.UseVisualStyleBackColor = true;
             btnBuscar.Click += btnBuscar_Click;
@@ -73,10 +73,10 @@ namespace CursosLibres.Views
             // 
             // btnSiguienteCursosActuales
             // 
-            btnSiguienteCursosActuales.Location = new Point(330, 392);
+            btnSiguienteCursosActuales.Location = new Point(300, 394);
             btnSiguienteCursosActuales.Name = "btnSiguienteCursosActuales";
             btnSiguienteCursosActuales.Size = new Size(139, 42);
-            btnSiguienteCursosActuales.TabIndex = 4;
+            btnSiguienteCursosActuales.TabIndex = 2;
             btnSiguienteCursosActuales.Text = "Siguiente";
             btnSiguienteCursosActuales.UseVisualStyleBackColor = true;
             btnSiguienteCursosActuales.Click += btnSiguienteCursosActuales_Click;
@@ -85,7 +85,7 @@ namespace CursosLibres.Views
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(478, 445);
+            ClientSize = new Size(452, 445);
             Controls.Add(btnSiguienteCursosActuales);
             Controls.Add(btnAnteriorCursosActuales);
             Controls.Add(btnBuscar);

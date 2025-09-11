@@ -51,7 +51,7 @@
             txtBoxNombreDocente.Name = "txtBoxNombreDocente";
             txtBoxNombreDocente.PlaceholderText = "Ingrese el nombre del docente";
             txtBoxNombreDocente.Size = new Size(305, 27);
-            txtBoxNombreDocente.TabIndex = 1;
+            txtBoxNombreDocente.TabIndex = 0;
             // 
             // txtBoxEspecialidadDocente
             // 
@@ -59,7 +59,7 @@
             txtBoxEspecialidadDocente.Name = "txtBoxEspecialidadDocente";
             txtBoxEspecialidadDocente.PlaceholderText = "Ingrese la especialidad del docente";
             txtBoxEspecialidadDocente.Size = new Size(305, 27);
-            txtBoxEspecialidadDocente.TabIndex = 3;
+            txtBoxEspecialidadDocente.TabIndex = 1;
             // 
             // lblEspecialidadDocente
             // 
@@ -75,7 +75,7 @@
             btnGuardadDocente.Location = new Point(192, 134);
             btnGuardadDocente.Name = "btnGuardadDocente";
             btnGuardadDocente.Size = new Size(128, 43);
-            btnGuardadDocente.TabIndex = 4;
+            btnGuardadDocente.TabIndex = 2;
             btnGuardadDocente.Text = "Guardar";
             btnGuardadDocente.UseVisualStyleBackColor = true;
             btnGuardadDocente.Click += btnGuardadDocente_Click;
@@ -85,7 +85,7 @@
             btnCancelarDocente.Location = new Point(326, 134);
             btnCancelarDocente.Name = "btnCancelarDocente";
             btnCancelarDocente.Size = new Size(128, 43);
-            btnCancelarDocente.TabIndex = 5;
+            btnCancelarDocente.TabIndex = 3;
             btnCancelarDocente.Text = "Cancelar";
             btnCancelarDocente.UseVisualStyleBackColor = true;
             btnCancelarDocente.Click += btnCancelarDocente_Click;
