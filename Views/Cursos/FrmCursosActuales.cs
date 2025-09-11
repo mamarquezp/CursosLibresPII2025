@@ -14,15 +14,17 @@ using CursosLibres.Data;
 namespace CursosLibres.Views
 
 {
-	public partial class FrmCursosActuales : Form
-	{
+    public partial class FrmCursosActuales : Form
+    {
         List<Curso> curso = InMemoryDb.Cursos;
         List<Curso> cursoFiltrado = new List<Curso>();
+        private int paginaActual = 1;
+        private int registrosPorPagina = 6; // por si se quisiera cambiar más adelante o hacer dinámico
 
         public FrmCursosActuales()
-		{
-			InitializeComponent();
-		}
+        {
+            InitializeComponent();
+        }
 
         public void renderizarCursos(List<Curso> listaCursos)
         {
@@ -33,6 +35,7 @@ namespace CursosLibres.Views
                 flowPanelTodoList.Controls.Add(tarjeta);
             }
         }
+
 
         public Panel crearTarjeta(Curso curso)
         {
@@ -73,9 +76,46 @@ namespace CursosLibres.Views
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            string busqueda = txtBoxBuscar.Text;
-            cursoFiltrado = curso.Where(filtro => filtro.Titulo.Contains(busqueda)).ToList();
-            renderizarCursos(cursoFiltrado);
+            string busqueda = txtBoxBuscar.Text.ToLower();
+            cursoFiltrado = curso.Where(filtro => filtro.Titulo.ToLower().Contains(busqueda) ||
+            filtro.Categoria.ToLower().Contains(busqueda)).ToList();
+            paginaActual = 1;
+            CargarCursos();
+        }
+
+        private void CargarCursos()
+        {
+            var listaFuente = cursoFiltrado.Any() || !string.IsNullOrWhiteSpace(txtBoxBuscar.Text) ? cursoFiltrado : curso;
+
+            var cursosPaginados = listaFuente
+                .Skip((paginaActual - 1) * registrosPorPagina)
+                .Take(registrosPorPagina)
+                .ToList();
+
+            renderizarCursos(cursosPaginados);
+
+            btnAnteriorCursosActuales.Enabled = paginaActual > 1;
+
+            int totalRegistros = listaFuente.Count();
+            int totalPaginas = (int)Math.Ceiling((double)totalRegistros / registrosPorPagina);
+            btnSiguienteCursosActuales.Enabled = paginaActual < totalPaginas;
+        }
+
+        private void FrmCursosActuales_Load(object sender, EventArgs e)
+        {
+            CargarCursos();
+        }
+
+        private void btnAnteriorCursosActuales_Click(object sender, EventArgs e)
+        {
+            paginaActual--;
+            CargarCursos();
+        }
+
+        private void btnSiguienteCursosActuales_Click(object sender, EventArgs e)
+        {
+            paginaActual++;
+            CargarCursos();
         }
     }
 }

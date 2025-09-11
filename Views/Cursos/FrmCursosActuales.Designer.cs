@@ -32,13 +32,15 @@ namespace CursosLibres.Views
             flowPanelTodoList = new FlowLayoutPanel();
             txtBoxBuscar = new TextBox();
             btnBuscar = new Button();
+            btnAnteriorCursosActuales = new Button();
+            btnSiguienteCursosActuales = new Button();
             SuspendLayout();
             // 
             // flowPanelTodoList
             // 
             flowPanelTodoList.Location = new Point(12, 45);
             flowPanelTodoList.Name = "flowPanelTodoList";
-            flowPanelTodoList.Size = new Size(908, 480);
+            flowPanelTodoList.Size = new Size(457, 343);
             flowPanelTodoList.TabIndex = 0;
             // 
             // txtBoxBuscar
@@ -46,12 +48,12 @@ namespace CursosLibres.Views
             txtBoxBuscar.Location = new Point(12, 12);
             txtBoxBuscar.Name = "txtBoxBuscar";
             txtBoxBuscar.PlaceholderText = "Nombre del curso que desea buscar";
-            txtBoxBuscar.Size = new Size(787, 27);
+            txtBoxBuscar.Size = new Size(336, 27);
             txtBoxBuscar.TabIndex = 1;
             // 
             // btnBuscar
             // 
-            btnBuscar.Location = new Point(805, 10);
+            btnBuscar.Location = new Point(354, 10);
             btnBuscar.Name = "btnBuscar";
             btnBuscar.Size = new Size(115, 29);
             btnBuscar.TabIndex = 2;
@@ -59,16 +61,39 @@ namespace CursosLibres.Views
             btnBuscar.UseVisualStyleBackColor = true;
             btnBuscar.Click += btnBuscar_Click;
             // 
+            // btnAnteriorCursosActuales
+            // 
+            btnAnteriorCursosActuales.Location = new Point(11, 392);
+            btnAnteriorCursosActuales.Name = "btnAnteriorCursosActuales";
+            btnAnteriorCursosActuales.Size = new Size(139, 42);
+            btnAnteriorCursosActuales.TabIndex = 3;
+            btnAnteriorCursosActuales.Text = "Anterior";
+            btnAnteriorCursosActuales.UseVisualStyleBackColor = true;
+            btnAnteriorCursosActuales.Click += btnAnteriorCursosActuales_Click;
+            // 
+            // btnSiguienteCursosActuales
+            // 
+            btnSiguienteCursosActuales.Location = new Point(330, 392);
+            btnSiguienteCursosActuales.Name = "btnSiguienteCursosActuales";
+            btnSiguienteCursosActuales.Size = new Size(139, 42);
+            btnSiguienteCursosActuales.TabIndex = 4;
+            btnSiguienteCursosActuales.Text = "Siguiente";
+            btnSiguienteCursosActuales.UseVisualStyleBackColor = true;
+            btnSiguienteCursosActuales.Click += btnSiguienteCursosActuales_Click;
+            // 
             // FrmCursosActuales
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(932, 537);
+            ClientSize = new Size(478, 445);
+            Controls.Add(btnSiguienteCursosActuales);
+            Controls.Add(btnAnteriorCursosActuales);
             Controls.Add(btnBuscar);
             Controls.Add(txtBoxBuscar);
             Controls.Add(flowPanelTodoList);
             Name = "FrmCursosActuales";
             Text = "Cursos Disponibles";
+            Load += FrmCursosActuales_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -80,5 +105,7 @@ namespace CursosLibres.Views
         private FlowLayoutPanel flowPanelTodoList;
         private TextBox txtBoxBuscar;
         private Button btnBuscar;
+        private Button btnAnteriorCursosActuales;
+        private Button btnSiguienteCursosActuales;
     }
 }
