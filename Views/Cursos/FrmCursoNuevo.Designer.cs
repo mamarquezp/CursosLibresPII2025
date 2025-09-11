@@ -217,7 +217,7 @@
             btnLimpiar.Location = new Point(543, 661);
             btnLimpiar.Name = "btnLimpiar";
             btnLimpiar.Size = new Size(132, 29);
-            btnLimpiar.TabIndex = 20;
+            btnLimpiar.TabIndex = 9;
             btnLimpiar.Text = "Limpiar";
             btnLimpiar.UseVisualStyleBackColor = true;
             btnLimpiar.Click += btnLimpiar_Click;
@@ -227,7 +227,7 @@
             btnGuardar.Location = new Point(405, 661);
             btnGuardar.Name = "btnGuardar";
             btnGuardar.Size = new Size(132, 29);
-            btnGuardar.TabIndex = 5;
+            btnGuardar.TabIndex = 8;
             btnGuardar.Text = "Guardar";
             btnGuardar.UseVisualStyleBackColor = true;
             btnGuardar.Click += btnGuardar_Click;
@@ -275,9 +275,11 @@
             // 
             nupDuracion.Location = new Point(193, 67);
             nupDuracion.Maximum = new decimal(new int[] { 999, 0, 0, 0 });
+            nupDuracion.Minimum = new decimal(new int[] { 30, 0, 0, 0 });
             nupDuracion.Name = "nupDuracion";
             nupDuracion.Size = new Size(150, 27);
             nupDuracion.TabIndex = 1;
+            nupDuracion.Value = new decimal(new int[] { 30, 0, 0, 0 });
             // 
             // lblDuracion
             // 
@@ -320,7 +322,7 @@
             panel1.Location = new Point(12, 310);
             panel1.Name = "panel1";
             panel1.Size = new Size(672, 332);
-            panel1.TabIndex = 24;
+            panel1.TabIndex = 10;
             // 
             // pnlPresencial
             // 
@@ -331,7 +333,7 @@
             pnlPresencial.Location = new Point(8, 172);
             pnlPresencial.Name = "pnlPresencial";
             pnlPresencial.Size = new Size(676, 72);
-            pnlPresencial.TabIndex = 25;
+            pnlPresencial.TabIndex = 5;
             // 
             // pnlVirtual
             // 
@@ -342,7 +344,7 @@
             pnlVirtual.Location = new Point(8, 245);
             pnlVirtual.Name = "pnlVirtual";
             pnlVirtual.Size = new Size(676, 60);
-            pnlVirtual.TabIndex = 26;
+            pnlVirtual.TabIndex = 6;
             // 
             // FrmCursoNuevo
             // 
