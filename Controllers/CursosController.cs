@@ -16,7 +16,7 @@ namespace CursosLibres.Controllers
 		{
 			InMemoryDb.Cursos.Add(new CursoPresencial(t, cat, cupo, costo, d, campus, salon));
 		}
-		
+
 		public void CrearVirtual(string t, string cat, int cupo, decimal costo, Docente d, string plataforma, string url)
 		{
 			InMemoryDb.Cursos.Add(new CursoVirtual(t, cat, cupo, costo, d, plataforma, new Uri(url)));
@@ -29,5 +29,12 @@ namespace CursosLibres.Controllers
 		{
 			c.Sesiones.Add(new Sesion(inicio, dur));
 		}
-	}
+
+        public List<Curso> ObtenerPorDocente(Guid docenteId)
+        {
+            return InMemoryDb.Cursos
+                .Where(c => c.Docente.Id == docenteId)
+                .ToList();
+        }
+    }
 }

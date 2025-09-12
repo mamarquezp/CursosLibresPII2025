@@ -65,14 +65,14 @@
             // nuevoCursoToolStripMenuItem
             // 
             nuevoCursoToolStripMenuItem.Name = "nuevoCursoToolStripMenuItem";
-            nuevoCursoToolStripMenuItem.Size = new Size(224, 26);
+            nuevoCursoToolStripMenuItem.Size = new Size(195, 26);
             nuevoCursoToolStripMenuItem.Text = "Cursos Actuales";
             nuevoCursoToolStripMenuItem.Click += nuevoCursoToolStripMenuItem_Click_1;
             // 
             // nuevoCursoToolStripMenuItem1
             // 
             nuevoCursoToolStripMenuItem1.Name = "nuevoCursoToolStripMenuItem1";
-            nuevoCursoToolStripMenuItem1.Size = new Size(224, 26);
+            nuevoCursoToolStripMenuItem1.Size = new Size(195, 26);
             nuevoCursoToolStripMenuItem1.Text = "Nuevo Curso";
             nuevoCursoToolStripMenuItem1.Click += nuevoCursoToolStripMenuItem1_Click;
             // 
@@ -118,20 +118,23 @@
             // docentesActualesToolStripMenuItem
             // 
             docentesActualesToolStripMenuItem.Name = "docentesActualesToolStripMenuItem";
-            docentesActualesToolStripMenuItem.Size = new Size(222, 26);
+            docentesActualesToolStripMenuItem.Size = new Size(224, 26);
             docentesActualesToolStripMenuItem.Text = "Docentes Actuales";
+            docentesActualesToolStripMenuItem.Click += docentesActualesToolStripMenuItem_Click;
             // 
             // nuevoDocenteToolStripMenuItem
             // 
             nuevoDocenteToolStripMenuItem.Name = "nuevoDocenteToolStripMenuItem";
-            nuevoDocenteToolStripMenuItem.Size = new Size(222, 26);
+            nuevoDocenteToolStripMenuItem.Size = new Size(224, 26);
             nuevoDocenteToolStripMenuItem.Text = "Nuevo Docente";
+            nuevoDocenteToolStripMenuItem.Click += nuevoDocenteToolStripMenuItem_Click;
             // 
             // cursosPorDocenteToolStripMenuItem
             // 
             cursosPorDocenteToolStripMenuItem.Name = "cursosPorDocenteToolStripMenuItem";
-            cursosPorDocenteToolStripMenuItem.Size = new Size(222, 26);
+            cursosPorDocenteToolStripMenuItem.Size = new Size(224, 26);
             cursosPorDocenteToolStripMenuItem.Text = "Cursos por Docente";
+            cursosPorDocenteToolStripMenuItem.Click += cursosPorDocenteToolStripMenuItem_Click;
             // 
             // MainForm
             // 

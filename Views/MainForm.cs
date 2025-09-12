@@ -1,4 +1,5 @@
 using CursosLibres.Views;
+using CursosLibres.Views.Docentes;
 
 namespace CursosLibres
 {
@@ -17,6 +18,21 @@ namespace CursosLibres
         private void nuevoCursoToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             new FrmCursosActuales { MdiParent = this }.Show();
+        }
+
+        private void nuevoDocenteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new FrmDocentes { MdiParent = this }.Show();
+        }
+
+        private void docentesActualesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new FrmDocentesActuales { MdiParent = this }.Show();
+        }
+
+        private void cursosPorDocenteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new FrmCursosPorDocente { MdiParent = this }.Show();
         }
     }
 }
