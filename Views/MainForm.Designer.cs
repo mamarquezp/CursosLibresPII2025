@@ -86,14 +86,16 @@
             // alumnosActualesToolStripMenuItem
             // 
             alumnosActualesToolStripMenuItem.Name = "alumnosActualesToolStripMenuItem";
-            alumnosActualesToolStripMenuItem.Size = new Size(210, 26);
+            alumnosActualesToolStripMenuItem.Size = new Size(224, 26);
             alumnosActualesToolStripMenuItem.Text = "Alumnos Actuales";
+            alumnosActualesToolStripMenuItem.Click += alumnosActualesToolStripMenuItem_Click;
             // 
             // nuevoAlumnoToolStripMenuItem
             // 
             nuevoAlumnoToolStripMenuItem.Name = "nuevoAlumnoToolStripMenuItem";
-            nuevoAlumnoToolStripMenuItem.Size = new Size(210, 26);
+            nuevoAlumnoToolStripMenuItem.Size = new Size(224, 26);
             nuevoAlumnoToolStripMenuItem.Text = "Nuevo Alumno";
+            nuevoAlumnoToolStripMenuItem.Click += nuevoAlumnoToolStripMenuItem_Click;
             // 
             // inscripcionesToolStripMenuItem
             // 
@@ -105,8 +107,8 @@
             // inscribirseAAlumnoToolStripMenuItem
             // 
             inscribirseAAlumnoToolStripMenuItem.Name = "inscribirseAAlumnoToolStripMenuItem";
-            inscribirseAAlumnoToolStripMenuItem.Size = new Size(226, 26);
-            inscribirseAAlumnoToolStripMenuItem.Text = "Inscribirse a Alumno";
+            inscribirseAAlumnoToolStripMenuItem.Size = new Size(212, 26);
+            inscribirseAAlumnoToolStripMenuItem.Text = "Inscribir a Alumno";
             // 
             // sesionesToolStripMenuItem
             // 
@@ -118,21 +120,21 @@
             // docentesActualesToolStripMenuItem
             // 
             docentesActualesToolStripMenuItem.Name = "docentesActualesToolStripMenuItem";
-            docentesActualesToolStripMenuItem.Size = new Size(224, 26);
+            docentesActualesToolStripMenuItem.Size = new Size(222, 26);
             docentesActualesToolStripMenuItem.Text = "Docentes Actuales";
             docentesActualesToolStripMenuItem.Click += docentesActualesToolStripMenuItem_Click;
             // 
             // nuevoDocenteToolStripMenuItem
             // 
             nuevoDocenteToolStripMenuItem.Name = "nuevoDocenteToolStripMenuItem";
-            nuevoDocenteToolStripMenuItem.Size = new Size(224, 26);
+            nuevoDocenteToolStripMenuItem.Size = new Size(222, 26);
             nuevoDocenteToolStripMenuItem.Text = "Nuevo Docente";
             nuevoDocenteToolStripMenuItem.Click += nuevoDocenteToolStripMenuItem_Click;
             // 
             // cursosPorDocenteToolStripMenuItem
             // 
             cursosPorDocenteToolStripMenuItem.Name = "cursosPorDocenteToolStripMenuItem";
-            cursosPorDocenteToolStripMenuItem.Size = new Size(224, 26);
+            cursosPorDocenteToolStripMenuItem.Size = new Size(222, 26);
             cursosPorDocenteToolStripMenuItem.Text = "Cursos por Docente";
             cursosPorDocenteToolStripMenuItem.Click += cursosPorDocenteToolStripMenuItem_Click;
             // 

@@ -16,7 +16,7 @@ namespace CursosLibres.Views
 {
     public partial class FrmDocentesActuales : Form
     {
-        List<Docente> curso = InMemoryDb.Docentes;
+        List<Docente> docente = InMemoryDb.Docentes;
         List<Docente> docenteFiltrado = new List<Docente>();
         private int paginaActual = 1;
         private int registrosPorPagina = 6; // por si se quisiera cambiar más adelante o hacer dinámico
@@ -26,10 +26,10 @@ namespace CursosLibres.Views
             InitializeComponent();
         }
 
-        public void renderizarCursos(List<Docente> listaCursos)
+        public void renderizarDocentes(List<Docente> listaDocente)
         {
             flowPanelDocenteActual.Controls.Clear();
-            foreach (Docente docente in listaCursos)
+            foreach (Docente docente in listaDocente)
             {
                 Panel tarjeta = crearTarjetaDocente(docente);
                 flowPanelDocenteActual.Controls.Add(tarjeta);
@@ -69,7 +69,7 @@ namespace CursosLibres.Views
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             string busqueda = txtBoxBuscarDocente.Text.ToLower();
-            docenteFiltrado = curso.Where(filtro => filtro.Nombre.ToLower().Contains(busqueda) ||
+            docenteFiltrado = docente.Where(filtro => filtro.Nombre.ToLower().Contains(busqueda) ||
             filtro.Especialidad.ToLower().Contains(busqueda)).ToList();
             paginaActual = 1;
             CargarDocentes();
@@ -77,14 +77,14 @@ namespace CursosLibres.Views
 
         private void CargarDocentes()
         {
-            var listaFuente = docenteFiltrado.Any() || !string.IsNullOrWhiteSpace(txtBoxBuscarDocente.Text) ? docenteFiltrado : curso;
+            var listaFuente = docenteFiltrado.Any() || !string.IsNullOrWhiteSpace(txtBoxBuscarDocente.Text) ? docenteFiltrado : docente;
 
             var docentePaginados = listaFuente
                 .Skip((paginaActual - 1) * registrosPorPagina)
                 .Take(registrosPorPagina)
                 .ToList();
 
-            renderizarCursos(docentePaginados);
+            renderizarDocentes(docentePaginados);
 
             btnAnteriorDocentesActuales.Enabled = paginaActual > 1;
 

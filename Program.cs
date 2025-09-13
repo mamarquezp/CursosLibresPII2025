@@ -16,12 +16,12 @@ namespace CursosLibres
 				new Alumno{ Nombre="Luis", Email="luis@ejemplo.com" },
 			});
             InMemoryDb.Docentes.AddRange(new[]{
-                new Docente{ Nombre="Ing. Sandoval", Especialidad="Programación" },
-                new Docente{ Nombre="Lic. Julio", Especialidad="Física" },
+                new Docente { Nombre="Ing. Sandoval", Especialidad="Programación" },
+                new Docente { Nombre="Lic. Julio", Especialidad="Física" },
                 new Docente { Nombre = "Lic. Rivera", Especialidad = "Diseño Gráfico" },
         });
 
-            var d = InMemoryDb.Docentes.FirstOrDefault(d => d.Nombre == "Lic. Rivera");
+            var d = InMemoryDb.Docentes.FirstOrDefault(d => d.Nombre == "Ing. Sandoval");
 
             if (d != null)
             {

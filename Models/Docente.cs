@@ -8,7 +8,7 @@ namespace CursosLibres.Models
 {
 	public sealed class Docente { 
 		public Guid Id { get; } = Guid.NewGuid(); 
-		public string Nombre { get; set; } = ""; 
+		public string Nombre { get; set; } = "";
 		public string Especialidad { get; set; } = ""; 
 	}
 }

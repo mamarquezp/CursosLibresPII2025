@@ -14,6 +14,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Update="Views\Alumnos\FrmAlumnosActuales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\Alumnos\FrmNuevoAlumno.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Views\Docentes\FrmDocentesActuales.cs">
       <SubType>Form</SubType>
     </Compile>

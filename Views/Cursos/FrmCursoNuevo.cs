@@ -23,7 +23,7 @@ namespace CursosLibres.Views.Cursos
             InitializeComponent();
             cursosController = new CursosController();
             cmbBoxCategoria.DataSource = Enum.GetValues(typeof(CursosLibres.Enums.CategoriaCurso));
-            cmbBoxDocente.DataSource = CursosLibres.Data.InMemoryDb.Docentes;
+            cmbBoxDocente.DataSource = CursosLibres.Data.InMemoryDb.Alumnos;
             cmbBoxDocente.DisplayMember = "Nombre";
         }
 
