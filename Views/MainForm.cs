@@ -45,5 +45,10 @@ namespace CursosLibres
         {
             new FrmNuevoAlumno { MdiParent = this }.Show();
         }
+
+        private void inscribirseAAlumnoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new FrmInscripciones { MdiParent = this }.Show();
+        }
     }
 }

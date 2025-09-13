@@ -107,8 +107,9 @@
             // inscribirseAAlumnoToolStripMenuItem
             // 
             inscribirseAAlumnoToolStripMenuItem.Name = "inscribirseAAlumnoToolStripMenuItem";
-            inscribirseAAlumnoToolStripMenuItem.Size = new Size(212, 26);
+            inscribirseAAlumnoToolStripMenuItem.Size = new Size(224, 26);
             inscribirseAAlumnoToolStripMenuItem.Text = "Inscribir a Alumno";
+            inscribirseAAlumnoToolStripMenuItem.Click += inscribirseAAlumnoToolStripMenuItem_Click;
             // 
             // sesionesToolStripMenuItem
             // 
