@@ -20,7 +20,12 @@ namespace CursosLibres.Controllers
 
 		public (Inscripcion insc, string msg) Inscribir(Alumno alumno, Curso curso, int maxActivos = 3)
 		{
-			int activos = InMemoryDb.Inscripciones.Count(i => i.Alumno.Id == alumno.Id &&
+            if (InMemoryDb.Inscripciones.Any(i => i.Alumno.Id == alumno.Id && i.Curso.Id == curso.Id))
+            {
+                return (null, "El alumno ya se encuentra inscrito o en lista de espera para este curso");
+            }
+
+            int activos = InMemoryDb.Inscripciones.Count(i => i.Alumno.Id == alumno.Id &&
 				(i.Estado == EstadoInscripcion.Confirmado || i.Estado == EstadoInscripcion.Preinscrito));
 			
 			if (activos >= maxActivos) 

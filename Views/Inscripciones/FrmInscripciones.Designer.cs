@@ -60,7 +60,7 @@
             // 
             cmbBoxCursos.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbBoxCursos.FormattingEnabled = true;
-            cmbBoxCursos.Location = new Point(310, 32);
+            cmbBoxCursos.Location = new Point(388, 32);
             cmbBoxCursos.Name = "cmbBoxCursos";
             cmbBoxCursos.Size = new Size(246, 28);
             cmbBoxCursos.TabIndex = 3;
@@ -69,7 +69,7 @@
             // lblCurso
             // 
             lblCurso.AutoSize = true;
-            lblCurso.Location = new Point(310, 9);
+            lblCurso.Location = new Point(388, 9);
             lblCurso.Name = "lblCurso";
             lblCurso.Size = new Size(46, 20);
             lblCurso.TabIndex = 2;
@@ -77,7 +77,7 @@
             // 
             // btnInscribir
             // 
-            btnInscribir.Location = new Point(201, 89);
+            btnInscribir.Location = new Point(247, 76);
             btnInscribir.Name = "btnInscribir";
             btnInscribir.Size = new Size(167, 69);
             btnInscribir.TabIndex = 4;
@@ -106,14 +106,14 @@
             dgvInscritos.ReadOnly = true;
             dgvInscritos.RowHeadersWidth = 51;
             dgvInscritos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvInscritos.Size = new Size(533, 215);
+            dgvInscritos.Size = new Size(622, 215);
             dgvInscritos.TabIndex = 6;
             // 
             // FrmInscripciones
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(557, 434);
+            ClientSize = new Size(646, 434);
             Controls.Add(dgvInscritos);
             Controls.Add(lblResultado);
             Controls.Add(btnInscribir);
